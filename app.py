@@ -105,6 +105,7 @@ def video_input(data_src):
             del st.session_state[key]
             key = random.random()
             op_textbox.text_area("Output: ", output_text, height=100, key = key)
+            cv2.waitKey(1)
 
         cap.release()
 
