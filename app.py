@@ -86,7 +86,7 @@ def video_input(data_src):
         key = random.random()
         op_textbox.text_area("Output: ", "", height=100, key = key)
         while True:
-            for _ in range(5): 
+            for _ in range(1): 
                 ret, frame = cap.read()
             ret, frame = cap.read()
             if not ret:
