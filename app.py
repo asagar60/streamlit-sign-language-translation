@@ -86,6 +86,8 @@ def video_input(data_src):
         key = random.random()
         op_textbox.text_area("Output: ", "", height=100, key = key)
         while True:
+            or _ in range(5): 
+                ret, frame = cap.read()
             ret, frame = cap.read()
             if not ret:
                 st.write("Can't read frame, stream ended? Exiting ....")
