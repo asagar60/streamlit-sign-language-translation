@@ -1,4 +1,3 @@
-from flask import Flask, render_template, Response, request, jsonify
 import cv2
 import datetime, time
 import os, sys
