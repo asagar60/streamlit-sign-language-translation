@@ -92,7 +92,7 @@ def video_input(data_src):
                 st.write("Can't read frame, stream ended? Exiting ....")
                 break
             frame, txt = give_yolo_result(cv2.cvtColor(frame, cv2.COLOR_BGR2RGB), model, size=640, confidence = confidence, device = device)
-            output.image(frame)
+            output.image(frame, channels = 'RGB', use_column_width = True)
             curr_time = time.time()
             fps = 1 / (curr_time - prev_time)
             prev_time = curr_time
@@ -105,7 +105,7 @@ def video_input(data_src):
             del st.session_state[key]
             key = random.random()
             op_textbox.text_area("Output: ", output_text, height=100, key = key)
-            cv2.waitKey(1)
+            
 
         cap.release()
 
